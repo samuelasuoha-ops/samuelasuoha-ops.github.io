@@ -1,172 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samuel Asuoha — Portfolio</title>
-  <meta name="description" content="Portfolio of Samuel Asuoha — aspiring software engineer and IT professional specializing in backend systems, cloud, and automation."/>
+  <meta name="description" content="Portfolio of Samuel Asuoha — aspiring software engineer focused on backend, cloud, automation, and front-end fundamentals.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#">Samuel<span>Asuoha</span></a>
-      <nav>
+      <a class="brand" href="#top">Samuel<span>Asuoha</span></a>
+      <nav class="nav-links">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a class="btn" href="#contact">Contact</a>
+        <button id="themeToggle" class="toggle" aria-label="Toggle color theme">🌓</button>
       </nav>
     </div>
   </header>
 
-  <section class="hero container">
-    <div class="hero-text">
-      <h1>Hi, I’m <span>Samuel Asuoha</span></h1>
-      <p>Aspiring software engineer and IT professional focused on backend systems, cloud technologies, and automation. I build efficient, scalable solutions with Python, Java, JavaScript, and modern tooling. Currently pursuing a Higher Diploma in Science Computing while shipping real-world projects in APIs, automation, and cloud deployment.</p>
-      <div class="cta">
-        <a class="btn" href="#projects">View my work</a>
-        <a class="link" href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">GitHub ↗</a>
-        <a class="link" href="https://www.linkedin.com/in/samuel-asuoha-01395917b" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Hi, I’m <span>Samuel Asuoha</span></h1>
+        <p>
+          Aspiring software engineer and IT professional focused on backend systems, cloud technologies, automation, and front-end fundamentals.
+          I build efficient, scalable solutions with Python, Java, JavaScript, and modern tooling. I’m currently pursuing a Higher Diploma in Science Computing (SETU) while shipping real-world projects in APIs, automation, and cloud deployment.
+        </p>
+        <div class="cta">
+          <a class="btn" href="#projects">View my work</a>
+          <a class="link" href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="link" href="https://www.linkedin.com/in/samuel-asuoha-01395917b" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-card">
-      <div class="card">
-        <h3>Now</h3>
-        <ul>
-          <li>Higher Diploma in Science Computing (SETU)</li>
-          <li>Python • Java • JavaScript</li>
-          <li>AWS • Docker • CI/CD</li>
-        </ul>
+      <div class="hero-card">
+        <div class="card">
+          <h3>Now</h3>
+          <ul>
+            <li>Higher Diploma in Science Computing (SETU)</li>
+            <li>Python • Java • JavaScript</li>
+            <li>AWS • Docker • CI/CD</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects" class="projects container">
-    <h2>Projects</h2>
-    <div class="grid">
-      <!-- Project 1 -->
-      <article class="project">
-        <h3>Microservices API (Flask + MongoDB)</h3>
-        <p>Python-based microservices with REST endpoints, containerized with Docker, data stored in MongoDB, and endpoints tested via Postman.</p>
-        <p class="tech">Tech: Python, Flask, MongoDB, Docker, REST APIs</p>
-        <div class="links">
-          <a href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">Repo</a>
-          <a href="#" class="disabled" title="Add a live demo link when ready">Live (optional)</a>
-        </div>
-      </article>
-      <!-- Project 2 -->
-      <article class="project">
-        <h3>CI/CD Pipeline to AWS</h3>
-        <p>Automated build and deploy of containerized Python apps to AWS using GitHub Actions and Jenkins. Includes environment-specific configs.</p>
-        <p class="tech">Tech: Python, AWS, Docker, GitHub Actions, Jenkins</p>
-        <div class="links">
-          <a href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">Repo</a>
-          <a href="#" class="disabled">Live (optional)</a>
-        </div>
-      </article>
-      <!-- Project 3 -->
-      <article class="project">
-        <h3>Weather Data Automation</h3>
-        <p>Script that fetches weather data from a REST API, stores it in SQLite, and plots trends. Scheduled to run daily via cron.</p>
-        <p class="tech">Tech: Python, REST API, SQLite, Matplotlib, Cron</p>
-        <div class="links">
-          <a href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">Repo</a>
-          <a href="#" class="disabled">Live (optional)</a>
-        </div>
-      </article>
-      <!-- Project 4 -->
-      <article class="project">
-        <h3>Responsive Website</h3>
-        <p>Built from scratch with semantic HTML, modern CSS, and vanilla JavaScript enhancements. Focus on accessibility and performance.</p>
-        <p class="tech">Tech: HTML, CSS, JavaScript</p>
-        <div class="links">
-          <a href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">Repo</a>
-          <a href="#" class="disabled">Live (optional)</a>
-        </div>
-      </article>
-      <!-- Project 5 -->
-      <article class="project">
-        <h3>Linux Scripting & QA Utilities</h3>
-        <p>Bash scripts for automating input/output checks, log parsing, and quick environment setup on Ubuntu servers.</p>
-        <p class="tech">Tech: Bash, Linux (Ubuntu)</p>
-        <div class="links">
-          <a href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">Repo</a>
-          <a href="#" class="disabled">Live (optional)</a>
-        </div>
-      </article>
-      <!-- Project 6 -->
-      <article class="project">
-        <h3>Front-end & API Integration</h3>
-        <p>Simple UI that consumes REST APIs for authentication and data rendering; includes form validation and responsive layout.</p>
-        <p class="tech">Tech: HTML, CSS, JavaScript, REST APIs</p>
-        <div class="links">
-          <a href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">Repo</a>
-          <a href="#" class="disabled">Live (optional)</a>
-        </div>
-      </article>
-    </div>
-  </section>
+    <section id="projects" class="projects container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="project">
+          <h3>Microservices API (Flask + MongoDB)</h3>
+          <p>RESTful microservices with Python Flask; containerized with Docker; data stored in MongoDB; endpoints tested via Postman.</p>
+          <p class="tech">Tech: Python, Flask, MongoDB, Docker, REST APIs</p>
+          <div class="links">
+            <a href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">Repo</a>
+            <a href="#" class="disabled" title="Add a live demo link when ready">Live (optional)</a>
+          </div>
+        </article>
 
-  <section id="skills" class="skills container">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div>
-        <h4>Programming & Scripting</h4>
-        <ul>
-          <li>Python, Java, JavaScript, Bash</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Web</h4>
-        <ul>
-          <li>HTML, CSS, REST APIs</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Cloud & DevOps</h4>
-        <ul>
-          <li>AWS (basics), Docker, Jenkins, CI/CD</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Databases</h4>
-        <ul>
-          <li>MongoDB, MySQL, SQLite</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Tools</h4>
-        <ul>
-          <li>Git, Jira, Confluence, Postman, VS Code</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+        <article class="project">
+          <h3>CI/CD Pipeline to AWS</h3>
+          <p>Automated build and deploy for containerized Python applications using GitHub Actions and Jenkins to AWS.</p>
+          <p class="tech">Tech: Python, AWS, Docker, GitHub Actions, Jenkins</p>
+          <div class="links">
+            <a href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">Repo</a>
+            <a href="#" class="disabled">Live (optional)</a>
+          </div>
+        </article>
 
-  <section id="about" class="about container">
-    <h2>About</h2>
-    <p>I’m an analytical and detail-oriented software engineer in training with experience building backend services, APIs, and automation tools. I enjoy solving real problems and learning new technologies. Recent work includes microservices with Flask, CI/CD pipelines on AWS, and scripting for QA. I’m currently studying for a Higher Diploma in Science Computing (SETU).</p>
-    <ul class="about-list">
-      <li>Finalist – AIB Build-a-Bank (Top 4 nationwide)</li>
-      <li>Agile team experience: sprints, code reviews, Jira</li>
-      <li>Clean, maintainable code and documentation</li>
-    </ul>
-  </section>
+        <article class="project">
+          <h3>Weather Data Automation</h3>
+          <p>Script that fetches weather data from a REST API, stores in SQLite, and visualizes trends. Runs daily via cron.</p>
+          <p class="tech">Tech: Python, REST API, SQLite, Matplotlib, Cron</p>
+          <div class="links">
+            <a href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">Repo</a>
+            <a href="#" class="disabled">Live (optional)</a>
+          </div>
+        </article>
 
-  <section id="contact" class="contact container">
-    <h2>Contact</h2>
-    <p>Open to internships, graduate roles, and freelance projects. Reach out!</p>
-    <div class="contact-links">
-      <a class="btn" href="mailto:samuel.asuoha@gmail.com">Email me</a>
-      <a class="btn btn-ghost" href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">GitHub</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/samuel-asuoha-01395917b" target="_blank" rel="noreferrer">LinkedIn</a>
-    </div>
-  </section>
+        <article class="project">
+          <h3>Responsive Website</h3>
+          <p>Built from scratch with semantic HTML, modern CSS, and vanilla JavaScript enhancements. Focus on accessibility and performance.</p>
+          <p class="tech">Tech: HTML, CSS, JavaScript</p>
+          <div class="links">
+            <a href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">Repo</a>
+            <a href="#" class="disabled">Live (optional)</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Linux Scripting & QA Utilities</h3>
+          <p>Bash utilities for automating input/output checks, log parsing, and quick environment setup on Ubuntu servers.</p>
+          <p class="tech">Tech: Bash, Linux (Ubuntu)</p>
+          <div class="links">
+            <a href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">Repo</a>
+            <a href="#" class="disabled">Live (optional)</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Front-end & API Integration</h3>
+          <p>Responsive UI that consumes REST APIs for authentication and data rendering; includes form validation and clean layout.</p>
+          <p class="tech">Tech: HTML, CSS, JavaScript, REST APIs</p>
+          <div class="links">
+            <a href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">Repo</a>
+            <a href="#" class="disabled">Live (optional)</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="skills container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <h4>Programming & Scripting</h4>
+          <ul>
+            <li>Python, Java, JavaScript, Bash</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Web</h4>
+          <ul>
+            <li>HTML, CSS, REST APIs</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Cloud & DevOps</h4>
+          <ul>
+            <li>AWS (basics), Docker, Jenkins, CI/CD</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Databases</h4>
+          <ul>
+            <li>MongoDB, MySQL, SQLite</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Tools</h4>
+          <ul>
+            <li>Git, Jira, Confluence, Postman, VS Code</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Soft skills</h4>
+          <ul>
+            <li>Problem-solving, communication, teamwork</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="experience container">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <article>
+          <header>
+            <h3>Sodexo (Pfizer Grange Castle) — GMP Cleaner</h3>
+            <span>Sep 2024 – Present</span>
+          </header>
+          <ul>
+            <li>Maintained GMP-compliant environments; logged tasks and supported audit readiness.</li>
+            <li>Coordinated with technicians and supervisors in a shift-based, regulated setting.</li>
+          </ul>
+        </article>
+
+        <article>
+          <header>
+            <h3>RGIS Inventory Specialists — Auditor</h3>
+            <span>Nov 2023 – Sep 2024</span>
+          </header>
+          <ul>
+            <li>Captured and verified large-scale inventory data with handheld tools.</li>
+            <li>Flagged discrepancies and supported data reconciliation and reporting.</li>
+          </ul>
+        </article>
+
+        <article>
+          <header>
+            <h3>FBD Insurance — IT Intern</h3>
+            <span>Feb 2022 – Aug 2022</span>
+          </header>
+          <ul>
+            <li>Automated workflows with Python; supported API integrations and testing.</li>
+            <li>Participated in debugging, documentation, and agile sprints.</li>
+          </ul>
+        </article>
+
+        <article>
+          <header>
+            <h3>Moseeve Intercontinental Food Store — Store Clerk/Assistant</h3>
+            <span>Jun 2019 – Aug 2019</span>
+          </header>
+          <ul>
+            <li>Managed customer service, stock documentation, and cold storage records.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="education container">
+      <h2>Education</h2>
+      <ul class="edu-list">
+        <li>
+          <strong>Higher Diploma in Science Computing</strong> — South East Technological University (SETU)<br>
+          <em>Jan 2024 – Expected Dec 2025</em>
+        </li>
+        <li>
+          <strong>BSc in Computing with Software Development</strong> — Technological University Dublin (Tallaght)<br>
+          <em>Sept 2018 – Dec 2022</em>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <p>Open to internships, graduate roles, and freelance projects. Let’s talk.</p>
+      <div class="contact-links">
+        <a class="btn" href="mailto:samuel.asuoha@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="https://github.com/samuelasuoha-ops" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/samuel-asuoha-01395917b" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">

@@ -6,6 +6,16 @@
   --txt:#e7e9ee;
   --accent:#7c9cff;
   --accent-2:#b486ff;
+  --border: rgba(255,255,255,.08);
+}
+[data-theme="light"]{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --muted:#4b5563;
+  --txt:#0b1220;
+  --accent:#3b82f6;
+  --accent-2:#8b5cf6;
+  --border: rgba(15,23,42,.12);
 }
 body{
   margin:0;
@@ -13,28 +23,34 @@ body{
   background:linear-gradient(180deg,#080a10, #0b0d12 60%);
   color:var(--txt);
 }
+[data-theme="light"] body,
+body[data-theme="light"]{
+  background: linear-gradient(180deg,#f0f2f8,#f6f7fb 60%);
+}
 .container{width:min(1100px,92%);margin-inline:auto}
-.nav{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:rgba(8,10,16,.6);border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
+.nav{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:rgba(8,10,16,.6);border-bottom:1px solid var(--border);z-index:10}
+[data-theme="light"] .nav{background:rgba(255,255,255,.6)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
 .brand{font-weight:700;letter-spacing:.3px;text-decoration:none;color:var(--txt);font-size:1.05rem}
 .brand span{color:var(--accent)}
 .nav a{color:var(--muted);text-decoration:none;margin-left:1rem}
 .nav a:hover{color:var(--txt)}
+.toggle{margin-left:.75rem;border:1px solid var(--border);background:transparent;color:var(--txt);padding:.4rem .55rem;border-radius:.5rem;cursor:pointer}
 .btn{background:var(--accent);color:#0b0d12;padding:.6rem 1rem;border-radius:.7rem;font-weight:600;text-decoration:none;display:inline-block}
-.btn:hover{opacity:.9}
-.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.16);color:var(--txt)}
+.btn:hover{opacity:.92}
+.btn-ghost{background:transparent;border:1px solid var(--border);color:var(--txt)}
 .hero{display:grid;grid-template-columns:1.4fr .9fr;gap:2rem;align-items:center;padding:3.2rem 0}
 .hero h1{font-size:2.4rem;line-height:1.15;margin:.2rem 0 1rem}
 .hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero p{color:var(--muted);max-width:60ch}
 .cta{display:flex;gap:1rem;margin-top:1rem;flex-wrap:wrap}
-.hero-card .card{background:var(--card);border:1px solid rgba(255,255,255,.06);padding:1.2rem;border-radius:1rem}
+.hero-card .card{background:var(--card);border:1px solid var(--border);padding:1.2rem;border-radius:1rem}
 .card h3{margin:.2rem 0 1rem}
 .card ul{margin:.2rem 0;padding-left:1rem;color:var(--muted)}
 h2{font-size:1.8rem;margin:0 0 1rem}
 .projects{padding:2.6rem 0}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem}
-.project{background:var(--card);padding:1rem 1.1rem;border-radius:1rem;border:1px solid rgba(255,255,255,.06)}
+.project{background:var(--card);padding:1rem 1.1rem;border-radius:1rem;border:1px solid var(--border)}
 .project h3{margin:.2rem 0 .4rem}
 .project p{color:var(--muted);margin:.2rem 0}
 .project .tech{font-size:.9rem;color:#9aa3b2}
@@ -45,13 +61,16 @@ h2{font-size:1.8rem;margin:0 0 1rem}
 .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .skills-grid h4{margin:.2rem 0 .5rem}
 .skills-grid ul{margin:0;padding-left:1.1rem;color:var(--muted)}
-.about{padding:2.2rem 0}
-.about p{color:var(--muted);max-width:70ch}
-.about-list{margin:.8rem 0 0;color:var(--muted)}
-.about-list li{margin:.25rem 0}
+.experience{padding:2.2rem 0}
+.timeline article{background:var(--card);border:1px solid var(--border);border-radius:1rem;padding:1rem 1.1rem;margin:.8rem 0}
+.timeline header{display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+.timeline ul{margin:.4rem 0 0;padding-left:1.1rem;color:var(--muted)}
+.education{padding:2.2rem 0}
+.edu-list{margin:0;padding-left:1.1rem;color:var(--muted)}
+.edu-list li{margin:.6rem 0}
 .contact{padding:2.2rem 0}
 .contact p{color:var(--muted)}
-.footer{border-top:1px solid rgba(255,255,255,.06);padding:1.2rem 0;color:#9aa3b2}
+.footer{border-top:1px solid var(--border);padding:1.2rem 0;color:#9aa3b2}
 @media (max-width:900px){
   .hero{grid-template-columns:1fr}
   .grid{grid-template-columns:1fr}
